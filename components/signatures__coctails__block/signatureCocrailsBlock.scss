@@ -1,0 +1,33 @@
+.signatuere__coctails__block__header {
+	position: relative;
+	top: 50px;
+	text-align: center;
+	font-size: 56px;
+	color: #ffffff;
+}
+.booking_back {
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+	padding: 10px 28px;
+	border: 1px solid;
+	border-radius: 4px;
+	font-size: 24px;
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+	user-select: none;
+}
+
+.signature__coctails__block__content__wrapper {
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+}
+
+.signature__coctails__block__content {
+	width: 300px;
+	color: rgb(255, 255, 255);
+	font-size: 20px;
+}

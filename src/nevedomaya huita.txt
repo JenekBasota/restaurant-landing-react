@@ -1,0 +1,65 @@
+import { useRef, useState } from 'react';
+import './App.css';
+import React from 'react';
+
+// eslint-disable-next-line react/prop-types
+function Square({ value, onSquareClick }) {
+	return (
+		<button className="square" onClick={onSquareClick}>
+			{value}
+		</button>
+	);
+}
+
+function Board() {
+	const rows = 20;
+	const currentSymbol = useRef('X');
+	const [squares, setSquares] = useState(Array(rows * rows).fill(null));
+	function handleClick(i) {
+		console.log(i);
+		const nextSquares = squares.slice();
+		nextSquares[i] = currentSymbol.current;
+		currentSymbol.current = currentSymbol.current === 'X' ? 'O' : 'X';
+		setSquares(nextSquares);
+	}
+	return (
+		<>
+			{Array(rows)
+				.fill(null)
+				.map((row, i) => {
+					return (
+						<div className="board-row" key={`array_row_${i}`}>
+							{Array(rows)
+								.fill(null)
+								.map((block, j) => {
+									const index = j + rows * i;
+									return (
+										<Square
+											value={squares[index]}
+											onSquareClick={() =>
+												handleClick(index)
+											}
+											key={`array_row_${i}_square_${j}`}
+										/>
+									);
+								})}
+						</div>
+					);
+				})}
+		</>
+	);
+}
+
+function App() {
+	let [a, setA] = useState(0);
+	return (
+		<div className="App">
+			<div className="card">
+				<button onClick={() => setA(a + 1)}>count is {a}</button>
+				<Board></Board>
+			</div>
+		</div>
+	);
+}
+
+export default App;

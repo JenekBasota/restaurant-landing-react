@@ -1,0 +1,49 @@
+body {
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+	font-family: 'Times New Roman', Times, serif;
+}
+:root {
+	scroll-behavior: smooth;
+}
+
+.menu__block__header__text,
+.drinks__block__menu__header,
+.img__block__header,
+.drinks__block__images__header,
+.deserts__block__header,
+.salads__block__header {
+	text-align: center;
+	font-size: 56px;
+}
+
+.signature__coctails__block__wrapper {
+	box-shadow: 0px 0px 16px 0 rgb(77, 77, 77);
+	height: 1300px;
+	background-color: rgb(0, 0, 0);
+}
+
+.txt {
+	text-decoration: none;
+}
+
+.main_menu_line_back {
+	width: 400px;
+	height: 1px;
+	border: 0px solid transparent;
+	background-color: rgb(248, 248, 248);
+	border-radius: 8px;
+	margin-top: 20px;
+}
+
+.second_menu {
+	margin-top: -200px;
+	margin-bottom: 0px;
+}
+.item {
+	font-size: 20px;
+	display: block;
+	margin-top: 50px;
+	margin-bottom: 10px;
+}
